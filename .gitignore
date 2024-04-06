@@ -1,0 +1,10 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore Node.js modules
+node_modules/
+myenv/
+# Ignore macOS .DS_Store files
+.DS_Store
+package-lock.json
+package.json
