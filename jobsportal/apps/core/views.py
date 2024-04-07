@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import login,logout
 def frontpage(request):
     return render(request, 'core/frontpage.html')
 
@@ -15,4 +15,12 @@ def signup(request):
             return redirect('frontpage')
     else:
         form = UserCreationForm()
-    return render(request, 'core/signup.html', {'form': form})
+    return render(request, 'core/signup.html', {'form' : form})
+
+# class LogoutView(View):
+#     def get(self,request):
+#         logout(request)
+#         return redirect('login')
+def logout_view(request):
+    logout(request)
+    return redirect('login')

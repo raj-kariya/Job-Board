@@ -15,14 +15,16 @@
         </div>
 
         <div class="navbar-menu">
-            <div class="avbar-end">
+            <div class="navbar-end">
                 <div class="navbar-item">
+                    <div class="buttons">
                     {% if request.user.is_authenticated %}
                         <a href="{% url 'logout' %}" class="button is-danger">Log out</a>
                     {% else %}
                         <a href="{% url 'signup' %}" class="button is-success"><strong>Sign up</strong></a>
-                        <a href="{% url 'login' %}" class="button is-success">Log In</a>
+                        <a href="{% url 'login' %}" class="button is-light">Log In</a>
                     {% endif %}
+                    </div>
                 </div>
             </div>
         </div>

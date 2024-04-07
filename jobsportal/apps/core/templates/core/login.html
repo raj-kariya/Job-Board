@@ -5,7 +5,7 @@
         <div class="column is-6 is-offset-3">
             <h1 class="title">Log in</h1>
 
-            <form method="post" action=".">
+            <form method="post" action="{% url 'logout' %}">
                 {% csrf_token %}
 
                 {{ form.as_p }}
