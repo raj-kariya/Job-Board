@@ -33,13 +33,15 @@ LOGOUT_REDIRECT_URL = 'frontpage'
 # Application definition
 
 INSTALLED_APPS = [
+    'apps',
+    'apps.core',
+    'apps.job',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.core',
 ]
 
 MIDDLEWARE = [

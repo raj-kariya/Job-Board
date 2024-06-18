@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login,logout
+from apps.job.models import Job
 def frontpage(request):
-    return render(request, 'core/frontpage.html')
+    jobs = Job.objects.all()[0:3]
+    return render(request, 'core/frontpage.html', {'jobs' : jobs})
 
 def signup(request):
     if request.method == 'POST':
